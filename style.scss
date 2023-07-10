@@ -1,0 +1,102 @@
+* {
+  transition: all ease 0.5s;
+}
+
+header {
+  .h-logo {
+    width: 400px;
+    height: 100px;
+  }
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10000000000;
+}
+@media (max-width: 992px) {
+  .close {
+    display: none;
+  }
+  .home {
+    margin-top: 100px;
+  }
+}
+
+.card-block {
+  position: relative;
+  box-sizing: border-box;
+  height: 198px;
+}
+.card-text {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+.kard {
+  border-radius: 5px;
+  overflow: hidden;
+  border: 3px solid rgb(255, 255, 255);
+  object-fit: cover;
+}
+.kard img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+}
+.kard .card-block:hover {
+  border-radius: 5px;
+  transform: scale(1.1);
+  transition: 0.5s;
+
+  overflow: hidden;
+}
+
+.back-gradient {
+  height: 198.2px;
+  background: linear-gradient(
+    225deg,
+    rgba(26, 42, 78, 0) 0,
+    rgba(26, 42, 78, 0.9) 65.07%
+  );
+}
+// .row .tugma {
+//   border: 0;
+//   height: 140px;
+//   width: 140px;
+// }
+
+.kardlar button {
+  background-color: white;
+}
+.rasm-9 {
+  object-fit: cover;
+  width: 95%;
+}
+.close {
+  position: fixed;
+  left: 0;
+  top: 70px;
+  bottom: 0;
+}
+@media (min-width: 992px) {
+  .home {
+    position: absolute;
+    left: 210px;
+    top: 100px;
+    // bottom: 0;
+    right: 0;
+  }
+}
+.entre {
+  width: 120px;
+  height: 20px;
+  border-bottom-right-radius: 50%;
+  border-top-left-radius: 50%;
+  color: white;
+  font-size: 10px;
+  vertical-align: middle;
+}
+.nav-item {
+  padding-right: 10px;
+}

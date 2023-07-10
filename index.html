@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson 34</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <nav
+        class="navbar navbar-expand-lg bg-light ikonlar m-0 p-0 me-0 "
+        style="height: 60px"
+      >
+        <div class="container-fluid h-100 p-0">
+          <a
+            class="navbar-brand bg-primary text-light h-100 d-flex align-items-center ps-4"
+            href="#"
+            style="width: 220px"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              style="fill: rgb(250, 250, 250)"
+            >
+              <path
+                d="M3 11h8V3H3zm2-6h4v4H5zM3 21h8v-8H3zm2-6h4v4H5zm8-12v8h8V3zm6 6h-4V5h4zm-5.99 4h2v2h-2zm2 2h2v2h-2zm-2 2h2v2h-2zm4 0h2v2h-2zm2 2h2v2h-2zm-4 0h2v2h-2zm2-6h2v2h-2zm2 2h2v2h-2z"
+              ></path>
+            </svg>
+            <b class="ps-2">Grid</b>Works
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse bg-light " id="navbarTogglerDemo02">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <img src="./img/user-icon.png" alt="" />
+              </li>
+              <li class="nav-item">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  style="fill: rgb(143, 141, 141)"
+                >
+                  <path
+                    d="M19.633 7.997c.013.175.013.349.013.523 0 5.325-4.053 11.461-11.46 11.461-2.282 0-4.402-.661-6.186-1.809.324.037.636.05.973.05a8.07 8.07 0 0 0 5.001-1.721 4.036 4.036 0 0 1-3.767-2.793c.249.037.499.062.761.062.361 0 .724-.05 1.061-.137a4.027 4.027 0 0 1-3.23-3.953v-.05c.537.299 1.16.486 1.82.511a4.022 4.022 0 0 1-1.796-3.354c0-.748.199-1.434.548-2.032a11.457 11.457 0 0 0 8.306 4.215c-.062-.3-.1-.611-.1-.923a4.026 4.026 0 0 1 4.028-4.028c1.16 0 2.207.486 2.943 1.272a7.957 7.957 0 0 0 2.556-.973 4.02 4.02 0 0 1-1.771 2.22 8.073 8.073 0 0 0 2.319-.624 8.645 8.645 0 0 1-2.019 2.083z"
+                  ></path>
+                </svg>
+              </li>
+              <li class="nav-item">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  style="fill: rgb(132, 132, 132)"
+                >
+                  <path
+                    d="M13.397 20.997v-8.196h2.765l.411-3.209h-3.176V7.548c0-.926.258-1.56 1.587-1.56h1.684V3.127A22.336 22.336 0 0 0 14.201 3c-2.444 0-4.122 1.492-4.122 4.231v2.355H7.332v3.209h2.753v8.202h3.312z"
+                  ></path>
+                </svg>
+              </li>
+              <li class="nav-item">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  style="fill: rgb(145, 145, 145)"
+                >
+                  <path
+                    d="M11.999 7.377a4.623 4.623 0 1 0 0 9.248 4.623 4.623 0 0 0 0-9.248zm0 7.627a3.004 3.004 0 1 1 0-6.008 3.004 3.004 0 0 1 0 6.008z"
+                  ></path>
+                  <circle cx="16.806" cy="7.207" r="1.078"></circle>
+                  <path
+                    d="M20.533 6.111A4.605 4.605 0 0 0 17.9 3.479a6.606 6.606 0 0 0-2.186-.42c-.963-.042-1.268-.054-3.71-.054s-2.755 0-3.71.054a6.554 6.554 0 0 0-2.184.42 4.6 4.6 0 0 0-2.633 2.632 6.585 6.585 0 0 0-.419 2.186c-.043.962-.056 1.267-.056 3.71 0 2.442 0 2.753.056 3.71.015.748.156 1.486.419 2.187a4.61 4.61 0 0 0 2.634 2.632 6.584 6.584 0 0 0 2.185.45c.963.042 1.268.055 3.71.055s2.755 0 3.71-.055a6.615 6.615 0 0 0 2.186-.419 4.613 4.613 0 0 0 2.633-2.633c.263-.7.404-1.438.419-2.186.043-.962.056-1.267.056-3.71s0-2.753-.056-3.71a6.581 6.581 0 0 0-.421-2.217zm-1.218 9.532a5.043 5.043 0 0 1-.311 1.688 2.987 2.987 0 0 1-1.712 1.711 4.985 4.985 0 0 1-1.67.311c-.95.044-1.218.055-3.654.055-2.438 0-2.687 0-3.655-.055a4.96 4.96 0 0 1-1.669-.311 2.985 2.985 0 0 1-1.719-1.711 5.08 5.08 0 0 1-.311-1.669c-.043-.95-.053-1.218-.053-3.654 0-2.437 0-2.686.053-3.655a5.038 5.038 0 0 1 .311-1.687c.305-.789.93-1.41 1.719-1.712a5.01 5.01 0 0 1 1.669-.311c.951-.043 1.218-.055 3.655-.055s2.687 0 3.654.055a4.96 4.96 0 0 1 1.67.311 2.991 2.991 0 0 1 1.712 1.712 5.08 5.08 0 0 1 .311 1.669c.043.951.054 1.218.054 3.655 0 2.436 0 2.698-.043 3.654h-.011z"
+                  ></path>
+                </svg>
+              </li>
+              <li class="nav-item">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  style="fill: rgb(132, 132, 132)"
+                >
+                  <path
+                    d="M13.397 20.997v-8.196h2.765l.411-3.209h-3.176V7.548c0-.926.258-1.56 1.587-1.56h1.684V3.127A22.336 22.336 0 0 0 14.201 3c-2.444 0-4.122 1.492-4.122 4.231v2.355H7.332v3.209h2.753v8.202h3.312z"
+                  ></path>
+                </svg>
+              </li>
+            </ul>
+            <form class="d-flex" role="email">
+              <input
+                class="form-control me-2 bg-body-secondary"
+                type="email"
+                placeholder="Email Address"
+                aria-label="Search"
+                
+              />
+              <button class="btn btn-outline-primary text-primary " style="width: 250px;" type="submit">
+                Stay Updated
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="row d-flex flex-nowrap justify-content-center align-items-start">
+      <nav class="navbar col-2 overflow-y-auto close " style="width: 220px;">
+        <div class="container ">
+          <div class="row ">
+           
+            <div
+              class="col text-center text-light-emphasis d-flex flex-column flex-nowrap align-items-center justify-content-center "  
+              
+            ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            style="fill: rgb(115, 115, 115)"
+          >
+            <path
+              d="M3 13h1v7c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2v-7h1a1 1 0 0 0 .707-1.707l-9-9a.999.999 0 0 0-1.414 0l-9 9A1 1 0 0 0 3 13zm7 7v-5h4v5h-4zm2-15.586 6 6V15l.001 5H16v-5c0-1.103-.897-2-2-2h-4c-1.103 0-2 .897-2 2v5H6v-9.586l6-6z"
+            ></path>
+          </svg>
+             
+              Home
+            </div>
+            
+            <div
+              class="col text-center text-light-emphasis d-flex flex-column flex-nowrap align-items-center justify-content-center"
+              style="width: 140px; height: 120px"
+            >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(116, 116, 116);"><path d="m10 13-1 5h2v4l3.975-6H13l1-3z"></path><path d="M18.944 10.112C18.507 6.67 15.56 4 12 4 9.244 4 6.85 5.611 5.757 8.15 3.609 8.792 2 10.819 2 13c0 2.757 2.243 5 5 5v-2c-1.654 0-3-1.346-3-3 0-1.403 1.199-2.756 2.673-3.015l.581-.103.192-.559C8.149 7.273 9.895 6 12 6c2.757 0 5 2.243 5 5v1h1c1.103 0 2 .897 2 2s-.897 2-2 2h-1v2h1c2.206 0 4-1.794 4-4a4.008 4.008 0 0 0-3.056-3.888z"></path></svg>
+              Services
+            </div>
+           
+          </div>
+          <div class="row">
+            <div
+              class="col text-center text-light-emphasis d-flex flex-column align-items-center justify-content-center"
+              style="width: 140px; height: 120px"
+            >
+            <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            style="fill: rgb(113, 113, 113)"
+          >
+            <path
+              d="m20.487 17.14-4.065-3.696a1.001 1.001 0 0 0-1.391.043l-2.393 2.461c-.576-.11-1.734-.471-2.926-1.66-1.192-1.193-1.553-2.354-1.66-2.926l2.459-2.394a1 1 0 0 0 .043-1.391L6.859 3.513a1 1 0 0 0-1.391-.087l-2.17 1.861a1 1 0 0 0-.29.649c-.015.25-.301 6.172 4.291 10.766C11.305 20.707 16.323 21 17.705 21c.202 0 .326-.006.359-.008a.992.992 0 0 0 .648-.291l1.86-2.171a.997.997 0 0 0-.085-1.39z"
+            ></path>
+          </svg>
+              </svg>
+              Contacts
+            </div>
+            <div
+              class="col text-center text-light-emphasis d-flex flex-column align-items-center justify-content-center"
+              style="width: 140px; height: 120px"
+            >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(116, 116, 116);"><path d="M12 16c2.206 0 4-1.794 4-4s-1.794-4-4-4-4 1.794-4 4 1.794 4 4 4zm0-6c1.084 0 2 .916 2 2s-.916 2-2 2-2-.916-2-2 .916-2 2-2z"></path><path d="m2.845 16.136 1 1.73c.531.917 1.809 1.261 2.73.73l.529-.306A8.1 8.1 0 0 0 9 19.402V20c0 1.103.897 2 2 2h2c1.103 0 2-.897 2-2v-.598a8.132 8.132 0 0 0 1.896-1.111l.529.306c.923.53 2.198.188 2.731-.731l.999-1.729a2.001 2.001 0 0 0-.731-2.732l-.505-.292a7.718 7.718 0 0 0 0-2.224l.505-.292a2.002 2.002 0 0 0 .731-2.732l-.999-1.729c-.531-.92-1.808-1.265-2.731-.732l-.529.306A8.1 8.1 0 0 0 15 4.598V4c0-1.103-.897-2-2-2h-2c-1.103 0-2 .897-2 2v.598a8.132 8.132 0 0 0-1.896 1.111l-.529-.306c-.924-.531-2.2-.187-2.731.732l-.999 1.729a2.001 2.001 0 0 0 .731 2.732l.505.292a7.683 7.683 0 0 0 0 2.223l-.505.292a2.003 2.003 0 0 0-.731 2.733zm3.326-2.758A5.703 5.703 0 0 1 6 12c0-.462.058-.926.17-1.378a.999.999 0 0 0-.47-1.108l-1.123-.65.998-1.729 1.145.662a.997.997 0 0 0 1.188-.142 6.071 6.071 0 0 1 2.384-1.399A1 1 0 0 0 11 5.3V4h2v1.3a1 1 0 0 0 .708.956 6.083 6.083 0 0 1 2.384 1.399.999.999 0 0 0 1.188.142l1.144-.661 1 1.729-1.124.649a1 1 0 0 0-.47 1.108c.112.452.17.916.17 1.378 0 .461-.058.925-.171 1.378a1 1 0 0 0 .471 1.108l1.123.649-.998 1.729-1.145-.661a.996.996 0 0 0-1.188.142 6.071 6.071 0 0 1-2.384 1.399A1 1 0 0 0 13 18.7l.002 1.3H11v-1.3a1 1 0 0 0-.708-.956 6.083 6.083 0 0 1-2.384-1.399.992.992 0 0 0-1.188-.141l-1.144.662-1-1.729 1.124-.651a1 1 0 0 0 .471-1.108z"></path></svg>
+              Components
+            </div>
+          </div>
+          <div class="row">
+            <div
+              class="col text-center text-light-emphasis d-flex flex-column align-items-center justify-content-center"
+              style="width: 140px; height: 120px"
+            >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(116, 116, 116);"><path d="m21.512 6.112-3.89 3.889-3.535-3.536 3.889-3.889a6.501 6.501 0 0 0-8.484 8.486l-6.276 6.275a.999.999 0 0 0 0 1.414l2.122 2.122a.999.999 0 0 0 1.414 0l6.275-6.276a6.501 6.501 0 0 0 7.071-1.414 6.504 6.504 0 0 0 1.414-7.071z"></path></svg>
+              Utilities
+            </div>
+            <div
+              class="col text-center text-light-emphasis d-flex flex-column align-items-center justify-content-center   "
+              style="width: 140px; height: 120px"
+            >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(116, 116, 116);"><path d="M20 3H4c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2zm-1 4v2h-5V7h5zm-5 4h5v2h-5v-2zM4 19V5h7v14H4z"></path></svg>
+              Document
+            </div>
+          </div>
+          <div class="row">
+            <div
+              class="col text-center text-light-emphasis d-flex flex-column align-items-center justify-content-center"
+              style="width: 140px; height: 120px"
+            >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(118, 118, 118);"><path d="M16.5 8c0 1.5-.5 3.5-2.9 4.3.7-1.7.8-3.4.3-5-.7-2.1-3-3.7-4.6-4.6-.4-.3-1.1.1-1 .7 0 1.1-.3 2.7-2 4.4C4.1 10 3 12.3 3 14.5 3 17.4 5 21 9 21c-4-4-1-7.5-1-7.5.8 5.9 5 7.5 7 7.5 1.7 0 5-1.2 5-6.4 0-3.1-1.3-5.5-2.4-6.9-.3-.5-1-.2-1.1.3"></path></svg>
+              Features
+            </div>
+            <div
+              class="col text-center text-light-emphasis d-flex flex-column align-items-center justify-content-center"
+              style="width: 140px; height: 120px"
+            >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(118, 118, 118);"><path d="M5 22h14a2 2 0 0 0 2-2V9a1 1 0 0 0-1-1h-3v-.777c0-2.609-1.903-4.945-4.5-5.198A5.005 5.005 0 0 0 7 7v1H4a1 1 0 0 0-1 1v11a2 2 0 0 0 2 2zm12-12v2h-2v-2h2zM9 7c0-1.654 1.346-3 3-3s3 1.346 3 3v1H9V7zm-2 3h2v2H7v-2z"></path></svg>
+              Cart
+            </div>
+          </div>
+          <div class="row">
+            <div
+              class="col text-center text-light-emphasis d-flex flex-column align-items-center justify-content-center"
+              style="width: 140px; height: 120px"
+            >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(114, 114, 114);"><path d="M4 21a1 1 0 0 0 .24 0l4-1a1 1 0 0 0 .47-.26L21 7.41a2 2 0 0 0 0-2.82L19.42 3a2 2 0 0 0-2.83 0L4.3 15.29a1.06 1.06 0 0 0-.27.47l-1 4A1 1 0 0 0 3.76 21 1 1 0 0 0 4 21zM18 4.41 19.59 6 18 7.59 16.42 6zM5.91 16.51 15 7.41 16.59 9l-9.1 9.1-2.11.52z"></path></svg>
+              Blog
+            </div>
+            <div
+              class="col text-center text-light-emphasis d-flex flex-column align-items-center justify-content-center"
+              style="width: 140px; height: 120px"
+            >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(117, 117, 117);"><path d="m21.88 2.15-1.2.4a13.84 13.84 0 0 1-6.41.64 11.87 11.87 0 0 0-6.68.9A7.23 7.23 0 0 0 3.3 9.5a8.65 8.65 0 0 0 1.47 6.6c-.06.21-.12.42-.17.63A22.6 22.6 0 0 0 4 22h2a30.69 30.69 0 0 1 .59-4.32 9.25 9.25 0 0 0 4.52 1.11 11 11 0 0 0 4.28-.87C23 14.67 22 3.86 22 3.41zm-7.27 13.93c-2.61 1.11-5.73.92-7.48-.45a13.79 13.79 0 0 1 1.21-2.84A10.17 10.17 0 0 1 9.73 11a9 9 0 0 1 1.81-1.42A12 12 0 0 1 16 8V7a11.43 11.43 0 0 0-5.26 1.08 10.28 10.28 0 0 0-4.12 3.65 15.07 15.07 0 0 0-1 1.87 7 7 0 0 1-.38-3.73 5.24 5.24 0 0 1 3.14-4 8.93 8.93 0 0 1 3.82-.84c.62 0 1.23.06 1.87.11a16.2 16.2 0 0 0 6-.35C20 7.55 19.5 14 14.61 16.08z"></path></svg>
+              About
+            </div>
+          </div>
+          <div class="row">
+            <div
+              class="col text-center text-light-emphasis d-flex flex-column align-items-center justify-content-center"
+              style="width: 140px; height: 120px"
+            >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(118, 117, 117);"><path d="M2.165 19.551c.186.28.499.449.835.449h15c.4 0 .762-.238.919-.606l3-7A.998.998 0 0 0 21 11h-1V8c0-1.103-.897-2-2-2h-6.655L8.789 4H4c-1.103 0-2 .897-2 2v13h.007a1 1 0 0 0 .158.551zM18 8v3H6c-.4 0-.762.238-.919.606L4 14.129V8h14z"></path></svg>
+              Portfolio
+            </div>
+            <div
+              class="col text-center text-light-emphasis d-flex flex-column align-items-center justify-content-center"
+              style="width: 140px; height: 120px"
+            >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(121, 121, 121);"><path d="m11.953 8.819-.547 2.19c.619.154 2.529.784 2.838-.456.322-1.291-1.673-1.579-2.291-1.734zm-.822 3.296-.603 2.415c.743.185 3.037.921 3.376-.441.355-1.422-2.029-1.789-2.773-1.974z"></path><path d="M14.421 2.299C9.064.964 3.641 4.224 2.306 9.581.97 14.936 4.23 20.361 9.583 21.697c5.357 1.335 10.783-1.924 12.117-7.281 1.336-5.356-1.924-10.781-7.279-12.117zm1.991 8.275c-.145.974-.686 1.445-1.402 1.611.985.512 1.485 1.298 1.009 2.661-.592 1.691-1.998 1.834-3.87 1.48l-.454 1.82-1.096-.273.447-1.794a44.624 44.624 0 0 1-.875-.228l-.449 1.804-1.095-.275.454-1.823c-.257-.066-.517-.136-.782-.202L6.87 15l.546-1.256s.808.215.797.199c.311.077.448-.125.502-.261l.719-2.875.115.029a.864.864 0 0 0-.114-.037l.512-2.053c.013-.234-.066-.528-.511-.639.018-.011-.797-.198-.797-.198l.291-1.172 1.514.378-.001.005c.227.057.461.111.7.165l.449-1.802 1.097.273-.44 1.766c.294.067.591.135.879.207l.438-1.755 1.097.273-.449 1.802c1.384.479 2.396 1.195 2.198 2.525z"></path></svg>
+              Pircing
+            </div>
+          </div>
+          <div class="row">
+            <div
+              class="col text-center text-light-emphasis d-flex flex-column align-items-center justify-content-center"
+              style="width: 140px; height: 120px"
+            >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(117, 117, 117);"><path d="M17 8V7c0-2.757-2.243-5-5-5S7 4.243 7 7v3H6c-1.103 0-2 .897-2 2v8c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2v-8c0-1.103-.897-2-2-2H9V7c0-1.654 1.346-3 3-3s3 1.346 3 3v1h2zm1 4 .002 8H6v-8h12z"></path></svg>
+              Terms
+            </div>
+            <div
+              class="col text-center text-light-emphasis d-flex flex-column align-items-center justify-content-center"
+              style="width: 140px; height: 120px"
+            >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(116, 116, 116);"><circle cx="9.5" cy="9.5" r="1.5"></circle><circle cx="14.5" cy="9.5" r="1.5"></circle><path d="M12 2C6.486 2 2 5.589 2 10c0 2.908 1.897 5.515 5 6.934V22l5.34-4.004C17.697 17.852 22 14.32 22 10c0-4.411-4.486-8-10-8zm0 14h-.333L9 18v-2.417l-.641-.247C5.671 14.301 4 12.256 4 10c0-3.309 3.589-6 8-6s8 2.691 8 6-3.589 6-8 6z"></path></svg>
+              Support
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="home col-10 overflow-hidden">
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row mx-2 row-gap-2 kardlar">
+                    <button  class=" btn-primary   kard text-center col-sm-6 col-lg-4   col-xxl-3"  type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal">
+
+                        <div  >
+                            <div class="card-block  ">
+    
+                                <img src="./img/pic-1.png " class="img-fluid" alt="">
+                                <div class="card-text d-flex flex-column justify-content-between p-3 back-gradient ">
+         
+                                    <h5 class="p1 text-start text-white">
+                                     Revolutionise your workspace with us at gridworks
+                                    </h5>
+                                        <div class="b-card d-flex flex-row justify-content-between align-items-center
+                                        ">
+
+                                            <p class="p2 uil  text-300 align-middle uil-lightbulb-alt text-light m-0 text-start">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z"></path><path d="m13 6-6 7h4v5l6-7h-4z"></path></svg>
+                                                Reffering workspace
+                                            </p>
+                                            <div class="entre bg-success" >
+                                                Entreship
+                                            </div>
+                                        </div>
+                                       
+                                </div>
+                            </div> 
+                        </div> 
+                    </button>
+                    <button  class=" btn-primary  kard text-center  col-sm-6 col-lg-4   col-xxl-3"  type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal">
+   
+                        <div class="   " >
+                            <div class="card-block  ">
+    
+                                <img src="./img/pic-2.png " class="img-fluid" alt="">
+                                <div class="card-text d-flex flex-column justify-content-between p-3 back-gradient ">
+         
+                                    <h5 class="p1 text-start text-white">
+                                     Revolutionise your workspace with us at gridworks
+                                    </h5>
+                                        
+                                    <p class="p2 uil fs--1 text-300 align-middle uil-lightbulb-alt text-light m-0 text-start">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);"><path d="M19.649 5.286 14 8.548V2.025h-4v6.523L4.351 5.286l-2 3.465 5.648 3.261-5.648 3.261 2 3.465L10 15.477V22h4v-6.523l5.649 3.261 2-3.465-5.648-3.261 5.648-3.261z"></path></svg>
+                                        Define Your Vision  
+                                    </p>
+                                       
+                                </div>
+                            </div>                          
+                        </div> 
+                    </button>
+                    <button  class=" btn-primary    kard text-center  col-sm-6 col-lg-4   col-xxl-3"  type="button" data-bs-toggle="modal"data-bs-target="#exampleModal">
+   
+                        <div class="" >
+                            <div class="card-block  ">
+    
+                                <img src="./img/pic-3.png " class="img-fluid" alt="">
+                                <div class="card-text d-flex flex-column justify-content-between p-3 back-gradient ">
+         
+                                    <h5 class="p1 text-start text-white">
+                                     Everything your team could need, We have got it
+                                    </h5>
+                                        
+                                    <p class="p2 uil fs--1 text-300 align-middle uil-lightbulb-alt text-light m-0 text-start">
+                                        
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);"><path d="M12 4C9.243 4 7 6.243 7 9h2c0-1.654 1.346-3 3-3s3 1.346 3 3c0 1.069-.454 1.465-1.481 2.255-.382.294-.813.626-1.226 1.038C10.981 13.604 10.995 14.897 11 15v2h2v-2.009c0-.024.023-.601.707-1.284.32-.32.682-.598 1.031-.867C15.798 12.024 17 11.1 17 9c0-2.757-2.243-5-5-5zm-1 14h2v2h-2z"></path></svg>
+                                        Solve Specific Problem
+                                    </p>
+                                       
+                                </div>
+                            </div>                           
+                        </div> 
+                    </button>
+                    <button  class=" btn-primary kard text-center col-sm-6 col-lg-8   col-xxl-3 "  type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal">
+   
+                        <div class="    " >
+                            <div class="card-block  ">
+    
+                                <img src="./img/pic-4.png " class="img-fluid" alt="">
+                                <div class="card-text d-flex flex-column justify-content-between p-3 back-gradient ">
+         
+                                    <h5 class="p1 text-start text-white">
+                                     How to grow and scale your business witohut hiring more people
+                                    </h5>
+                                        
+                                    <p class="p2 uil fs--1 text-300 align-middle uil-lightbulb-alt text-light m-0 text-start">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);"><path d="m12 17 1-2V9.858c1.721-.447 3-2 3-3.858 0-2.206-1.794-4-4-4S8 3.794 8 6c0 1.858 1.279 3.411 3 3.858V15l1 2zM10 6c0-1.103.897-2 2-2s2 .897 2 2-.897 2-2 2-2-.897-2-2z"></path><path d="m16.267 10.563-.533 1.928C18.325 13.207 20 14.584 20 16c0 1.892-3.285 4-8 4s-8-2.108-8-4c0-1.416 1.675-2.793 4.267-3.51l-.533-1.928C4.197 11.54 2 13.623 2 16c0 3.364 4.393 6 10 6s10-2.636 10-6c0-2.377-2.197-4.46-5.733-5.437z"></path></svg>
+                                        Define Your Space
+                                    </p>
+                                       
+                                </div>
+                            </div>                           
+                        </div>                  
+                    </button>
+                    <button  class=" btn-primary     kard text-center col-sm-6 col-lg-4 col-xxl-4"  type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal">
+   
+                        <div class=" " >
+                            <div class="card-block  ">
+    
+                                <img src="./img/pic-5.png " class="img-fluid" alt="">
+                                <div class="card-text d-flex flex-column justify-content-between p-3 back-gradient ">
+         
+                                    <h5 class="p1 text-start text-white">
+                                     How training by brain to focus helped me to build two profitable business
+                                    </h5>
+                                        
+                                    <p class="p2 uil fs--1 text-300 align-middle uil-lightbulb-alt text-light m-0 text-start">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);"><path d="M4 6h16v2H4zm4 5h12v2H8zm5 5h7v2h-7z"></path></svg>
+                                        List Your Business Goals
+                                    </p>
+                                       
+                                </div>
+                            </div>                              
+                        </div> 
+                    </button>
+                    <button  class=" btn-primary  kard text-center   col-sm-6 col-xxl-4 col-lg-6"  type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal">
+   
+                        <div class="  " >
+                            <div class="card-block  ">
+    
+                                <img src="./img/pic-6.png " class="img-fluid" alt="">
+                                <div class="card-text d-flex flex-column justify-content-between p-3 back-gradient ">
+         
+                                    <h5 class="p1 text-start text-white">
+                                     Revolutionise your workspace with us at gridworks
+                                    </h5>
+                                        
+                                    <p class="p2 uil fs--1 text-300 align-middle uil-lightbulb-alt text-light m-0 text-start">
+                                        Reffering workspace
+                                    </p>
+                                       
+                                </div>
+                            </div>                              
+                        </div> 
+                    </button>
+                    <button  class=" btn-primary  col-sm-6  kard text-center  col-xxl-4 col-lg-6"  type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal">
+   
+                        <div class=" " >
+                            <div class="card-block  ">
+    
+                                <img src="./img/pic-7.png " class="img-fluid" alt="">
+                                <div class="card-text d-flex flex-column justify-content-between p-3 back-gradient ">
+         
+                                    <h5 class="p1 text-start text-white">
+                                     Revolutionise your workspace with us at gridworks
+                                    </h5>
+                                        
+                                    <p class="p2 uil fs--1 text-300 align-middle uil-lightbulb-alt text-light m-0 text-start">
+                                        Reffering workspace
+                                    </p>
+                                       
+                                </div>
+                            </div>                              
+                        </div> 
+                    </button>
+                    <button  class=" btn-primary   col-sm-6 kard text-center  col-xxl-6 col-lg-8"  type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <div class=" " >
+                            <div class="card-block  ">
+    
+                                <img src="./img/pic-8.png " class="img-fluid" alt="">
+                                <div class="card-text d-flex flex-column justify-content-between p-3 back-gradient ">
+         
+                                    <h5 class="p1 text-start text-white">
+                                     Revolutionise your workspace with us at gridworks
+                                    </h5>
+                                        
+                                    <p class="p2 uil fs--1 text-300 align-middle uil-lightbulb-alt text-light m-0 text-start">
+                                        Reffering workspace
+                                    </p>
+                                       
+                                </div>
+                            </div>                              
+                        </div>    
+                    </button>
+                    <button  class=" btn-primary  col-sm-6  kard text-center  col-xxl-6 col-lg-4"  type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <div class=" " >
+                            <div class="card-block  ">
+    
+                                <img src="./img/pic-13.png " class="img-fluid" alt="">
+                                <div class="card-text d-flex flex-column justify-content-between p-3 back-gradient ">
+         
+                                    <h5 class="p1 text-start text-white">
+                                     Revolutionise your workspace with us at gridworks
+                                    </h5>
+                                        
+                                    <p class="p2 uil fs--1 text-300 align-middle uil-lightbulb-alt text-light m-0 text-start">
+                                        Reffering workspace
+                                    </p>
+                                       
+                                </div>
+                            </div>                              
+                        </div> 
+                    </button>
+                    <button  class=" btn-primary  col-sm-6  kard text-center col-xxl-4 col-lg-6"  type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <div class=" " >
+                            <div class="card-block  ">
+    
+                                <img src="./img/pic-14.png " class="img-fluid" alt="">
+                                <div class="card-text d-flex flex-column justify-content-between p-3 back-gradient ">
+         
+                                    <h5 class="p1 text-start text-white">
+                                     Revolutionise your workspace with us at gridworks
+                                    </h5>
+                                        
+                                    <p class="p2 uil fs--1 text-300 align-middle uil-lightbulb-alt text-light m-0 text-start">
+                                        Reffering workspace
+                                    </p>
+                                       
+                                </div>
+                            </div>                              
+                        </div>
+                    </button>
+                    <button  class=" btn-primary  col-sm-6  kard text-center  col-xxl-4 col-lg-6 "  type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <div class="" >
+                            <div class="card-block  ">
+    
+                                <img src="./img/pic-15.jpg " class="img-fluid" alt="">
+                                <div class="card-text d-flex flex-column justify-content-between p-3 back-gradient ">
+         
+                                    <h5 class="p1 text-start text-white">
+                                     Revolutionise your workspace with us at gridworks
+                                    </h5>
+                                        
+                                    <p class="p2 uil fs--1 text-300 align-middle uil-lightbulb-alt text-light m-0 text-start">
+                                        Reffering workspace
+                                    </p>
+                                       
+                                </div>
+                            </div>                              
+                        </div> 
+                    </button>
+                    <button  class=" btn-primary  col-sm-6  kard text-center  col-xxl-4 col-lg-8"  type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <div class=" " >
+                            <div class="card-block  ">
+    
+                                <img src="./img/pic-16.jpg " class="img-fluid" alt="">
+                                <div class="card-text d-flex flex-column justify-content-between p-3 back-gradient ">
+         
+                                    <h5 class="p1 text-start text-white">
+                                     Revolutionise your workspace with us at gridworks
+                                    </h5>
+                                        
+                                    <p class="p2 uil fs--1 text-300 align-middle uil-lightbulb-alt text-light m-0 text-start">
+                                        Reffering workspace
+                                    </p>
+                                       
+                                </div>
+                            </div>                              
+                        </div> 
+                    </button>
+                    <button  class=" btn-primary col-sm-6  kard text-center col-xxl-3 col-lg-4 "  type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <div class=" " >
+                            <div class="card-block  ">
+    
+                                <img src="./img/pic-17.jpg " class="img-fluid" alt="">
+                                <div class="card-text d-flex flex-column justify-content-between p-3 back-gradient ">
+         
+                                    <h5 class="p1 text-start text-white">
+                                     Revolutionise your workspace with us at gridworks
+                                    </h5>
+                                        
+                                    <p class="p2 uil fs--1 text-300 align-middle uil-lightbulb-alt text-light m-0 text-start">
+                                        Reffering workspace
+                                    </p>
+                                       
+                                </div>
+                            </div>                              
+                        </div>
+                    </button>
+                    <button  class=" btn-primary   col-sm-6  kard text-center  col-xxl-3 col-lg-4"  type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <div class="" >
+                            <div class="card-block  ">
+    
+                                <img src="./img/pic-18.jpg " class="img-fluid" alt="">
+                                <div class="card-text d-flex flex-column justify-content-between p-3 back-gradient ">
+         
+                                    <h5 class="p1 text-start text-white">
+                                     Revolutionise your workspace with us at gridworks
+                                    </h5>
+                                        
+                                    <p class="p2 uil fs--1 text-300 align-middle uil-lightbulb-alt text-light m-0 text-start">
+                                        Reffering workspace
+                                    </p>
+                                       
+                                </div>
+                            </div>                              
+                        </div> 
+                    </button>
+                    <button  class=" btn-primary col-sm-6  kard text-center  col-xxl-3 col-lg-4 "  type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <div class=" " >
+                            <div class="card-block  ">
+    
+                                <img src="./img/pic-19.png " class="img-fluid" alt="">
+                                <div class="card-text d-flex flex-column justify-content-between p-3 back-gradient ">
+         
+                                    <h5 class="p1 text-start text-white">
+                                     Revolutionise your workspace with us at gridworks
+                                    </h5>
+                                        
+                                    <p class="p2 uil fs--1 text-300 align-middle uil-lightbulb-alt text-light m-0 text-start">
+                                        Reffering workspace
+                                    </p>
+                                       
+                                </div>
+                            </div>                              
+                        </div> 
+                    </button>     
+                    <button  class=" btn-primary  col-sm-6  kard text-center  col-xxl-3 col-lg-4"  type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <div class=" " >
+                            <div class="card-block  ">
+    
+                                <img src="./img/pic-1.png " class="img-fluid" alt="">
+                                <div class="card-text d-flex flex-column justify-content-between p-3 back-gradient ">
+         
+                                    <h5 class="p1 text-start text-white">
+                                     Revolutionise your workspace with us at gridworks
+                                    </h5>
+                                        
+                                    <p class="p2 uil fs--1 text-300 align-middle uil-lightbulb-alt text-light m-0 text-start">
+                                        Reffering workspace
+                                    </p>
+                                       
+                                </div>
+                            </div>                              
+                        </div>
+                    </button>                      
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                              <button type="button" class="btn-close modal-tugma" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              <p class="p10">
+                                Thiel spends 6 months writing down everything he knows about<br> business. His book sells for $10 on Amazon.<br>
+                                Adam Wathan and Steve Schoger spend 6 months writing down everything they know<br> about design. Their “book” sells for $79 online.Believe it or not, both prices make perfect<br> sense.Thiel is selling to the masses and the masses are sensitive to price changes (price elastic). If he raises the price<br> to $30 they wouldn’t think twice before substituting his book for one of the many cheaper alternatives on Amazon.
+                                <img src="./img/pic-9.jpg" class="rasm-9" alt="">
+                            </p>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary bg-secondary" data-bs-dismiss="modal">Close</button>
+                              <button type="button" class="btn btn-primary bg-primary">Save changes</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>                
+                </div>
+            </div>
+        </div>
+      </div>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
